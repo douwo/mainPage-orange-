@@ -1,0 +1,77 @@
+/*修改bootstrap默认样式*/
+
+.carousel-indicators .active {
+	background: linear-gradient(to left,#FFAB1C,#FF651E);
+	background-color: #FF651E;
+	border: 0;
+	width: 30px;
+	transition: width .5s linear;
+	box-shadow: 0 1px 3px 0 #333;}
+
+.carousel-control.left {
+	background-image: none;
+}
+
+.carousel-control.right {
+	background-image: none;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px solid #EB8730;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.nav-tabs>li.active>a {
+	color: #EB8730 !important;
+}
+
+.nav-tabs>li>a {
+	color: #e8a76f;
+	background-color: transparent;
+	border-radius: 0;
+	border: 0;
+	border-top: 2px solid transparent;
+}
+
+.nav-tabs>li>a:hover {
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid #EB8730;
+	background-color: transparent;
+	color: #EB8730;
+}
+
+.well {
+	border-radius: 0;
+}
+
+.panel-group .panel+.panel {
+	margin-top: 0;
+	border-top: 1px;
+}
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+	height: 298px;
+}
+
+.panel-default>.panel-heading {
+	background-color: #EB8730 !important;
+	border-radius: 0;
+}
+
+.panel-group .panel {
+	border-radius: 0;
+}
+.nav.nav-tabs{
+	background-color: #fff;
+}
+

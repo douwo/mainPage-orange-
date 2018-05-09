@@ -1,0 +1,269 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: "微软雅黑", "黑体";
+	position: relative;
+	/*overflow: hidden;*/
+}
+body{
+	background: url(../img/bg01.jpg);
+	background-position: center center;
+	background-size: 110%;
+}
+ul,
+li {
+	list-style: none;
+}
+
+.open-loading {
+	overflow-y: hidden;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	padding-top: 15vh;
+	background-color: #fff;
+}
+
+.logo {
+	margin-top: 8vh;
+	animation-duration: 1s !important;
+}
+
+.users-logo {
+	position: relative;
+	padding-left: 8vw;
+	top: 5vh;
+}
+
+.null {
+	height: 10vh;
+}
+
+.main-content {
+	height: 100vh;
+	position: relative;
+}
+
+.QR>div {
+	/*margin-left: 6vw;*/
+	display: flex;
+	justify-content: center;
+	margin-top: 20vh;
+}
+
+.QR-content {
+	float: left;
+	margin: 0 1vw;
+	transition: all .5s;
+}
+
+.QR-content:hover {
+	transform: scale(1.2);
+	box-shadow: 0 5px 10px -2px #000000;
+}
+
+.QR-bg {
+	height: 190px;
+	width: 150px;
+	background-color: #eee;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.QR-font {
+	padding-top: 10px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.users-btn {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 95vw;
+	cursor: pointer;
+}
+
+.users-btn li {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 80px;
+	width: 80px;
+	background-color: #BB6109;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 10px;
+	bottom: 10px;
+	box-sizing: border-box;
+	transition: all .2s linear;
+	border-radius: 50%;
+	border: 4px solid orange;
+	box-shadow: 0 2px 10px -2px #666;
+}
+
+.users-btn li:hover {
+	border: 4px solid orangered;
+	z-index: 10;
+}
+
+.users-btn li:active {
+	transition: all .2s;
+	transform: scale(1.1);
+	box-shadow: 0 8px 10px -2px #666;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+	.QR>div {
+		margin-left: 0vw;
+		justify-content: center;
+	}
+	.users-btn {
+		display: flex;
+		justify-content: center;
+		position: static;
+		margin-top: 5vh;
+	}
+	.users-btn>ul {
+		padding: 0;
+		display: flex;
+		justify-content: center;
+	}
+	.users-btn li {
+		height: 10vh;
+		width: 10vh;
+		margin-top: 2vh;
+	}
+	.main-content {
+		height: 110vh;
+		position: relative;
+	}
+}
+
+
+/*loading*/
+
+.loader-2 {
+	width: 195px;
+	height: 195px;
+	margin: 30px auto;
+	position: relative;
+	perspective: 97px;
+	transform-type: preserve-3d;
+	animation: loading-3 6.9s cubic-bezierrgb(0, 0, 0) infinite;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.loader-2 .loader-inner {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #a10702;
+	margin: -88px 0 0 -10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 10;
+	transform-type: preserve-3d;
+	transform-origin: 50% 88px;
+	transform: rotateZ(30deg);
+	animation: loading-4 1.73s cubic-bezier(.6, 0, .4, 1) infinite;
+}
+
+.loader-2 .loader-inner:nth-child(2) {
+	background: #faa613;
+	transform: rotateZ(15deg);
+	animation-name: loading-5;
+	animation-delay: 172.5ms;
+}
+
+.loader-2 .loader-inner:nth-child(3) {
+	background: #688e26;
+	transform: rotateZ(0deg);
+	animation-name: loading-6;
+	animation-delay: 345ms;
+}
+
+.loader-2 .loader-inner:nth-child(4) {
+	background: #f44708;
+	transform: rotateZ(-15deg);
+	animation-name: loading-7;
+	animation-delay: 517.5ms;
+}
+
+.loader-2 .loader-inner:nth-child(5) {
+	background: #2e294e;
+	transform: rotateZ(-30deg);
+	animation-name: loading-8;
+	animation-delay: 690ms;
+}
+
+@keyframes loading-3 {
+	0% {
+		transform: rotateX(30deg) rotateZ(0deg);
+	}
+	100% {
+		transform: rotateX(30deg) rotateZ(-360deg);
+	}
+}
+
+@keyframes loading-4 {
+	0% {
+		transform: rotateZ(30deg) rotateX(10deg);
+	}
+	95%,
+	100% {
+		transform: rotateZ(390deg) rotateX(10deg);
+	}
+}
+
+@keyframes loading-5 {
+	0% {
+		transform: rotateZ(15deg) rotateX(10deg);
+	}
+	95%,
+	100% {
+		transform: rotateZ(375deg) rotateX(10deg);
+	}
+}
+
+@keyframes loading-6 {
+	0% {
+		transform: rotateZ(0deg) rotateX(10deg);
+	}
+	95%,
+	100% {
+		transform: rotateZ(360deg) rotateX(10deg);
+	}
+}
+
+@keyframes loading-7 {
+	0% {
+		transform: rotateZ(-15deg) rotateX(10deg);
+	}
+	95%,
+	100% {
+		transform: rotateZ(345deg) rotateX(10deg);
+	}
+}
+
+@keyframes loading-8 {
+	0% {
+		transform: rotateZ(-30deg) rotateX(10deg);
+	}
+	95%,
+	100% {
+		transform: rotateZ(330deg) rotateX(10deg);
+	}
+}

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8" />
 		<title>重庆海吉亚肿瘤医院</title>
@@ -9,20 +8,15 @@
 		<link rel="icon" type="image/x-icon" href="img/logo.png" />
 		<link rel="stylesheet" type="text/css" href="css/Normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/footer.css" />
 		<link rel="stylesheet" type="text/css" href="css/animate.css" />
 		<link rel="stylesheet" type="text/css" href="css/aos.css" />
 		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/zhezhao.css" />
-		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/aos.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/divscroll.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.6&key=a198c4dc2831422245dc7c7eed0aec49"></script>
-		<script src="js/headroom.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/jQuery.headroom.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="js/layer/theme/default/layer.css" />
+		<link rel="stylesheet" type="text/css" href="css/layer-reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<style type="text/css">
 			body {
 				position: relative;
@@ -39,11 +33,11 @@
 				<div class="container-fluid" style="background-color: #fff;">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				    </button>
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+				    	</button>
 						<a class="navbar-brand font-color" href="#" style="margin-left: 10px;padding: 10px 15px;">
 							<img alt="logo" src="img/logo.png" height="34px" width="34px" style="display: inline-block;"> &nbsp;重庆海吉亚肿瘤医院
 						</a>
@@ -63,6 +57,9 @@
 							</ul>
 						</div>
 						<ul class="nav navbar-nav navbar-right text-center" style="margin-right: 10px;">
+							<li>
+								<button type="button" class="btn btn-default navbar-btn users-activity-btn" onclick="alert()">近期活动<span class="huizhang">3</span></button>
+							</li>
 							<li>
 								<p class="navbar-text font-color"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> : 000-0000-0000</p>
 								<p class="navbar-text font-color"><span class="glyphicon glyphicon glyphicon-envelope" aria-hidden="true"></span> : xxx@xx.xx</p>
@@ -110,24 +107,41 @@
 				<span class="sr-only">Next</span>
 			</a>
 		</div>
-		<!--<div class="swiper-container2" style="margin-top: 50px;">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<div class="banner-content banner-content-img01"></div>
-				</div>
-				<div class="swiper-slide">
-					<div class="banner-content banner-content-img02"></div>
+		<div id="titlezero" class="aos-init sort-image01" aos="fade-up">
+				<h2>医院简介</h2>
+				<div class="users-line"></div>
+				<div class="jianjie-bg">
+					<!--<p id="jianjie"></p>-->
+					<div id="jianjie2" class="swiper-container">
+						<div class="swiper-wrapper" style="height: 300px;width: 100%;">
+							<div class="swiper-slide">
+								<p>重庆（中美）海吉亚国际医院位于重庆大学城，与重庆大学一墙之隔。占地80亩，规划建筑面积8.6万方，床位1500张，总投资20亿人民币，按三级甲等医院的标准建立的一所集临床、科研、预防、教学、康复于一体的现代化国际医院,目前开放床位500张。</p>
+							</div>
+							<div class="swiper-slide">
+								<p>医院拥有全套进口CT、DR、钼靶、磁共振、PET-CT、直线加速器、陀螺刀、TOMO等大型医疗设备，为西南地区最大的外资医院，经重庆市卫计委批准设立，是沙坪坝区人民政府重点建设民生工程。</P>
+							</div>
+							<div class="swiper-slide">
+								<p>同时与国外多所知名大学建立长期战略合作伙伴关系，目前已开通与美国和日本多家医院国际会诊和转诊平台，如美国MD安德森癌症中心、斯坦福大学医学院、梅奥诊所、内布拉斯加州医学院，日本藤田大学医学院、癌症研究会有明医院、群马大学重粒子医学中心等。</p>
+							</div>
+							<div class="swiper-slide">
+								<p>我院拥有一批重庆市有突出贡献专家、市级学科带头人、硕士生职导师。医院医务人员大多来自市内及上海各大三甲医院。我院是以肿瘤治疗为特色的大型综合性医院，开设科室有：肿瘤内科、肿瘤放疗科、胸外科、胃肠外科、甲状腺乳腺科、肝胆外科、泌尿外科、皮肤科、耳鼻喉科、腹瘤中心、骨科、心内科、消化内科、呼吸内科、内分泌科、神经内科、妇科、中医科、体检中心，急诊科，重症医学科等临床科室。</p>
+							</div>
+							<div class="swiper-slide">
+								<p>本着以“让医疗更温暖”的院训，突出“说实话、办实事、讲诚信”的医院文化，为老百姓的健康保驾护航。医院以回馈社会、慈善为先的理念，按照二级医院的收费，让患者享受到三甲医院的医疗,也为有特殊需求的患者提供高端国际医疗服务。</p>
+							</div>
+						</div>
+						<!-- 如果需要滚动条 -->
+						<div class="swiper-scrollbar"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
 				</div>
 			</div>
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
-			<div class="swiper-pagination2"></div>
-		</div>-->
 		<div class="container">
-			<div class="row jumbotron" style="margin-top: 50px;">
+			<div class="row jumbotron" style="">
 				<div class="col-xs-12 col-md-4 aos-init" aos="fade-up">
 					<div class="test1" style="width: 100%;position: relative;">
-						<div class="swiper-container" style="height: 200px;">
+						<div id="news-shuffling" class="swiper-container" style="height: 200px;">
 							<div class="swiper-wrapper text-color-white">
 								<div class="swiper-slide swiper1-content1">
 									<div class="news-banner-title">title1</div>
@@ -234,13 +248,6 @@
 					</p>
 				</div>
 			</div>
-			<div id="titlezero" class="aos-init sort-image01" aos="fade-up">
-				<h2>医院简介</h2>
-				<div class="users-line"></div>
-				<div class="jianjie-bg">
-					<p id="jianjie"></p>
-				</div>
-			</div>
 			<div class="style-label" aos="fade-up">
 				<div class="container">
 					<ul class="box-shadow effect2">
@@ -261,7 +268,7 @@
 						<li class="col-md-3 col-sm-6 col-xs-6">
 							<span class="glyphicon glyphicon-pencil flt" aria-hidden="true"></span>
 							<div class="label-text">
-								<h3>Prescription</h3>
+								<h3>infor</h3>
 								<p>Lorem Ipsum is simply dummy text of the printing industry.</p>
 							</div>
 						</li>
@@ -362,25 +369,23 @@
 					</div>
 				</div>
 			</div>
-			<div id="titletwo" class="jumbotron">
-				<h2 class="text-center aos-init" aos="fade-down">专家团队</h2>
-			</div>
+		</div>
+		<div id="titletwo" class="jumbotron">
+			<h2 class="text-center aos-init" aos="fade-down">专家团队</h2>
+		</div>
+		<div id="mob_doctorPhotos" class="container">
 			<div class="row">
-				<div class="col-sm-3 col-md-3">
+				<div class="col-sm-3 col-md-3 col-xs-6">
 					<div class="thumbnail photo-padding" titletwo aos="zoom-out" aos-delay="100" style="text-align: center;padding: 0;">
 						<div class="doctor-photo" onclick="show(1)">
 							<img style="" src="img/doctor/1.jpg" />
 						</div>
 						<div class="caption">
 							<h4>温剑虎</h4>
-							<!--<p>党支部书记</p>
-							<p style="text-align: left;padding: 0 10px;text-indent: 28px;">
-								胸外科主任、医务科科长 主任医师、教授、硕士生导师 原重庆医科大学附属第一医院胸心外科专家 新几内亚太平洋国际医院胸心外科主任
-							</p>-->
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-3">
+				<div class="col-sm-3 col-md-3 col-xs-6">
 					<div class="thumbnail photo-padding" aos="zoom-out" aos-delay="100" style="text-align: center;">
 						<div class="doctor-photo">
 							<img style="width: 100%;" src="img/doctor/1.jpg" />
@@ -390,7 +395,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-3">
+				<div class="col-sm-3 col-md-3 col-xs-6">
 					<div class="thumbnail photo-padding" aos="zoom-out" aos-delay="100" style="text-align: center;">
 						<div class="doctor-photo">
 							<img style="width: 100%;" src="img/doctor/1.jpg" />
@@ -400,7 +405,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-3">
+				<div class="col-sm-3 col-md-3 col-xs-6">
 					<div class="thumbnail photo-padding" aos="zoom-out" aos-delay="100" style="text-align: center;">
 						<div class="doctor-photo">
 							<img style="width: 100%;" src="img/doctor/1.jpg" />
@@ -412,20 +417,17 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-3 col-md-3">
+				<div class="col-sm-3 col-md-3 col-xs-6">
 					<div class="thumbnail photo-padding" titletwo aos="zoom-out" aos-delay="100" style="text-align: center;padding: 0;">
 						<div class="doctor-photo" onclick="show(2)">
 							<img style="width: 100%;" src="img/doctor/2.jpg" />
 						</div>
 						<div class="caption">
 							<h4>徐晓薇</h4>
-							<!--<p style="text-align: left;padding: 0 10px;text-indent: 28px;">
-								重庆市沙坪坝区政协第九、十、十一届政协委员 重庆市放射肿瘤学学会委员 重庆市癌症康复与姑息治疗专委会委员 重庆市高级心理咨询师
-							</p>-->
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-3">
+				<div class="col-sm-3 col-md-3 col-xs-6">
 					<div class="thumbnail photo-padding" aos="zoom-out" aos-delay="100" style="text-align: center;">
 						<div class="doctor-photo">
 							<img style="width: 100%;" src="img/doctor/2.jpg" />
@@ -435,7 +437,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-3">
+				<div class="col-sm-3 col-md-3 col-xs-6">
 					<div class="thumbnail photo-padding" aos="zoom-out" aos-delay="100" style="text-align: center;">
 						<div class="doctor-photo">
 							<img style="width: 100%;" src="img/doctor/2.jpg" />
@@ -445,7 +447,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-md-3">
+				<div class="col-sm-3 col-md-3 col-xs-6">
 					<div class="thumbnail photo-padding" aos="zoom-out" aos-delay="100" style="text-align: center;">
 						<div class="doctor-photo">
 							<img style="width: 100%;" src="img/doctor/2.jpg" />
@@ -456,7 +458,34 @@
 					</div>
 				</div>
 			</div>
-			<hr />
+		</div>
+		<style type="text/css">
+			#doctor_photos {
+				overflow: hidden;
+				height: 500px;
+			}
+			
+			#doctor_photos ul {
+				width: 99999px;
+			}
+			
+			#doctor_photos li {
+				float: left;
+				overflow: hidden;
+				width: 96px;
+				height: 500px;
+				box-shadow: 0 0 10px 0 #000;
+				display: flex;
+				justify-content: center;
+			}
+			
+			#doctor_photos img {
+				vertical-align: top;
+			}
+		</style>
+		<div id="doctor_photos"></div>
+		<div class="container">
+			<div style="height: 50px;"></div>
 			<div class="row">
 				<div class="col-md-4 col-xs-12">
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -564,7 +593,7 @@
 				<div class="footer-wrap auto">
 					<div class="foot-nav">
 						<dl>
-							<dt><a href="#">医院概况</a></dt>
+							<dt><a href="#">友情链接</a></dt>
 							<!--<dd>
 								<a href="about.aspx?type=3">医院介绍</a>
 								<a href="about.aspx?type=3">关于布莱根健康</a>
@@ -573,10 +602,10 @@
 							</dd>-->
 						</dl>
 						<dl>
-							<dt><a href="#">医院概况</a></dt>
+							<dt><a href="#">友情链接</a></dt>
 						</dl>
 						<dl>
-							<dt><a href="#">医院概况</a></dt>
+							<dt><a href="#">友情链接</a></dt>
 						</dl>
 					</div>
 					<div class="coopyright">
@@ -611,6 +640,16 @@
 				</div>
 			</div>
 		</div>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/aos.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/divscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.6&key=a198c4dc2831422245dc7c7eed0aec49"></script>
+		<script src="js/headroom.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jQuery.headroom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/layer/layer.js" type="text/javascript" charsesct="utf-8"></script>
+		<script src="js/accordion.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 	<script>
 		AOS.init({
@@ -618,37 +657,15 @@
 			duration: 1000
 		});
 		$(function() {
-			$('.test1').perfectScrollbar();
-			var swiper = new Swiper('.swiper-container', {
-				autoplay: true,
-				autoplay: {
-					delay: 3000,
-					stopOnLastSlide: false,
-					disableOnInteraction: false,
-				},
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true
-				},
-				delay: 10,
-				loop: true,
-				speed: 500
-			});
-			var mySwiper2 = new Swiper('.swiper-container2', {
-				autoplay: true, //可选选项，自动滑动
-				pagination: {
-					el: '.swiper-pagination2',
-					clickable: true
-				},
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
-				loop: true,
-				speed: 500
-			})
+			//			$('body').perfectScrollbar();
 			$("[data-toggle='tooltip']").tooltip();
 			$("#header").headroom();
+			$('#doctor_photos').doctor_photos({
+				w: $(document.body).width(),
+				h: 500,
+				imgNum: 8, // 图片数量
+				mouse: 'mouseover' // 事件
+			});
 		})
 	</script>
 	<script type="text/javascript">

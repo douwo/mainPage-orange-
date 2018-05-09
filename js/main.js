@@ -8,6 +8,49 @@ $(function() {
 		"<p>同时与国外多所知名大学建立长期战略合作伙伴关系，目前已开通与美国和日本多家医院国际会诊和转诊平台，如美国MD安德森癌症中心、斯坦福大学医学院、梅奥诊所、内布拉斯加州医学院，日本藤田大学医学院、癌症研究会有明医院、群马大学重粒子医学中心等。</p>" +
 		"<p>我院拥有一批重庆市有突出贡献专家、市级学科带头人、硕士生职导师。医院医务人员大多来自市内及上海各大三甲医院。我院是以肿瘤治疗为特色的大型综合性医院，开设科室有：肿瘤内科、肿瘤放疗科、胸外科、胃肠外科、甲状腺乳腺科、肝胆外科、泌尿外科、皮肤科、耳鼻喉科、腹瘤中心、骨科、心内科、消化内科、呼吸内科、内分泌科、神经内科、妇科、中医科、体检中心，急诊科，重症医学科等临床科室。</p>" +
 		"<p>本着以“让医疗更温暖”的院训，突出“说实话、办实事、讲诚信”的医院文化，为老百姓的健康保驾护航。医院以回馈社会、慈善为先的理念，按照二级医院的收费，让患者享受到三甲医院的医疗,也为有特殊需求的患者提供高端国际医疗服务。</p>")
+	layer.open({
+		type: 1,
+		title: "提示",
+		closeBtn: 1,
+		shadeClose: true,
+		skin: 'right-bottom',
+		content: '文本或者图片',
+		shade: 0,
+		offset: "rb",
+		time: 3000
+	});
+	var swiper = new Swiper('#news-shuffling', {
+		autoplay: true,
+		autoplay: {
+			delay: 3000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
+		},
+		delay: 10,
+		loop: true,
+		speed: 800
+	});
+	var swiper2 = new Swiper('#jianjie2', {
+		autoplay: true,
+		autoplay: {
+			delay: 4000,
+		},
+		delay: 10,
+//		loop: true,
+		speed: 2000,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
 })
 
 var doctorName = ['w', 'e', 'r', 'q'];
@@ -38,13 +81,13 @@ $(document).scroll(function() {
 	} else {
 		$('#goTop').show(300);
 	}
-	if(top < titleOneText_P) {
-		$("body").css("background-color", "#E88F5A");
-	} else if(top < titleTwoText_P) {
-		$("body").css("background-color", "#FFB951");
-	} else {
-		$("body").css("background-color", "#eee");
-	}
+	//	if(top < titleOneText_P) {
+	//		$("body").css("background-color", "#E88F5A");
+	//	} else if(top < titleTwoText_P) {
+	//		$("body").css("background-color", "#FFB951");
+	//	} else {
+	//		$("body").css("background-color", "#eee");
+	//	}
 })
 $("#zero").click(function() {
 	$('body,html').animate({
@@ -73,3 +116,19 @@ function show(i) {
 $(".users-dialog-close").click(function() {
 	$(".users-dialog-bg").css("display", "none");
 })
+
+function alert() {
+	layer.tab({
+		area: ['600px', '300px'],
+		tab: [{
+			title: 'TAB1',
+			content: '1'
+		}, {
+			title: 'TAB2',
+			content: '2'
+		}, {
+			title: 'TAB3',
+			content: '3'
+		}]
+	});
+}
