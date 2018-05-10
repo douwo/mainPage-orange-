@@ -14,11 +14,10 @@
 		<link rel="stylesheet" type="text/css" href="js/layer/theme/default/layer.css" />
 		<link rel="stylesheet" type="text/css" href="css/opening_page.css" />
 		<link rel="stylesheet" type="text/css" href="css/footer.css" />
-		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
-		<!--<aside class="open-loading">
+		<aside class="open-loading">
 			<div class="loader-2">
 				<div class="loader-inner"></div>
 				<div class="loader-inner"></div>
@@ -27,26 +26,20 @@
 				<div class="loader-inner"></div>
 				<img class="logo animated flipInY" src="img/logo.png" height="90" width="90" />
 			</div>
-		</aside>-->
+		</aside>
+		<aside class="users-down-anime animated fadeInDown">
+			<span class="glyphicon glyphicon-menu-down"></span>
+		</aside>
 		<div class="container-fluid main-content">
 			<div class="users-logo">
 				<img style="float: left;" src="img/logo.png" height="110" width="110" />
-				<!--<h2 style="display: inline-block;margin-top: 10px;margin-bottom: 5px;">重庆海吉亚肿瘤医院</h2>
-				<p style="margin-top: 0;font-size: 16px;">chongqing..</p>
-				<p>重庆市XX研究所..</p>-->
 			</div>
 			<div class="null"></div>
 			<div class="QR">
 				<div class="container-fluid">
 					<div class="QR-content">
 						<div class="QR-bg">
-							<img src="img/QRcode.jpg" height="140" width="140" />
-							<p class="QR-font">官方微博</p>
-						</div>
-					</div>
-					<div class="QR-content">
-						<div class="QR-bg">
-							<img src="img/QRcode.jpg" height="140" width="140" />
+							<img src="img/QRcode.jpg" style="height: 20vh;" />
 							<p class="QR-font">官方微信公众号</p>
 						</div>
 					</div>
@@ -54,15 +47,27 @@
 			</div>
 			<div class="users-btn">
 				<ul>
+					<a href="index.html">
+						<li>
+							<p>
+								text1
+							</p>
+						</li>
+					</a>
+
 					<li>
-						<span>logo</span>
-						<font>text</font>
+						<p>text2</p>
 					</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
+					<li>
+						<p>text3</p>
+					</li>
+					<li>
+						<p>text4</p>
+					</li>
 				</ul>
 			</div>
+		</div>
+		<div class="users-footer-top">
 		</div>
 		<footer>
 			<div class="footer">
@@ -99,23 +104,33 @@
 						</div>
 					</div>
 					<div class="clear"></div>
-					<div style="color: #fff;text-align: right;float: right;margin-right: 10vw;width: 100%;margin-top: 1vh;">
+					<div class="bq2" style="">
 						©重庆海吉亚肿瘤医院版权所有 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					</div>
 				</div>
 			</div>
-			<!--<div class="bq users-text-center">
-
-			</div>-->
 		</footer>
 	</body>
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/divscroll.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-//		$(function() {
-//			setTimeout(function() {
-//				$(".open-loading").fadeOut(300);
-//				$('body').css("overflow", "auto");
-//			}, 2500);
-//		})
+		$(function() {
+			$(".users-down-anime").hide();
+			setTimeout(function() {
+				$(".users-down-anime").show();
+				$(".open-loading").fadeOut(600,function(){
+					$('html').css("overflow", "auto");
+				});
+			}, 2000);
+		})
+		$(document).scroll(function() {
+			var top = $(document).scrollTop();
+			if(top < 100) {
+				$('.users-down-anime').show(300);
+			} else {
+				$('.users-down-anime').hide(300);
+			}
+		})
 	</script>
 
 </html>
