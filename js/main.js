@@ -1,7 +1,7 @@
 $(function() {
 	titleZeroText_P = $("#titlezero").offset().top - 130;
-	titleOneText_P = $("#titleone").offset().top + 320;
-	titleTwoText_P = $("#titletwo").offset().top + 320;
+	titleOneText_P = $("#titleone").offset().top + 100;
+	titleTwoText_P = $("#titletwo").offset().top + 100;
 	$("#goTop").hide();
 	$("#jianjie").html("<p><img class='jianjie-img' src='img/banner1.jpg' height='200' style='float:right;padding:0 10px'/>重庆（中美）海吉亚国际医院位于重庆大学城，与重庆大学一墙之隔。占地80亩，规划建筑面积8.6万方，床位1500张，总投资20亿人民币，按三级甲等医院的标准建立的一所集临床、科研、预防、教学、康复于一体的现代化国际医院,目前开放床位500张。</p>" +
 		"<p>医院拥有全套进口CT、DR、钼靶、磁共振、PET-CT、直线加速器、陀螺刀、TOMO等大型医疗设备，为西南地区最大的外资医院，经重庆市卫计委批准设立，是沙坪坝区人民政府重点建设民生工程。</P>" +

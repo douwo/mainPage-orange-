@@ -255,15 +255,23 @@ li {
 	font-weight: 300;
 	letter-spacing: 1px;
 }
-#jianjie2 .swiper-slide{
+
+#jianjie2>.swiper-wrapper {
+	height: 200px;
+	width: 100%;
+}
+
+#jianjie2 .swiper-slide {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-#jianjie2 .swiper-slide p{
+
+#jianjie2 .swiper-slide p {
 	font-size: 18px;
 	width: 80%;
 }
+
 .text-color-white {
 	color: white;
 }
@@ -364,11 +372,13 @@ li {
 	color: #333;
 }
 
+
 /*.doctor-photo {
 	position: relative;
 	height: 100%;
 }*/
-.mob-doctor-photo{
+
+.mob-doctor-photo {
 	height: 100%;
 }
 
@@ -634,6 +644,9 @@ ul.box-shadow {
 }
 
 @media only screen and (min-width: 100px) and (max-width: 480px) {
+	#goTop{
+		bottom: 10vh;
+	}
 	.headroom {
 		width: 100%;
 		position: fixed;
@@ -677,5 +690,8 @@ ul.box-shadow {
 	}
 	#mob_doctorPhotos {
 		display: block;
+	}
+	#jianjie2>.swiper-wrapper {
+		height: 400px;
 	}
 }

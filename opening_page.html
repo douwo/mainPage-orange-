@@ -17,6 +17,23 @@
 	</head>
 
 	<body>
+		<div id="swiper-bg">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="img01"></div>
+					</div>
+					<!--<div class="swiper-slide">
+						<div class="img02"></div>
+					</div>
+					<div class="swiper-slide">
+						<div class="img03"></div>
+					</div>-->
+				</div>
+				<!-- 如果需要分页器 -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
 		<aside class="open-loading">
 			<div class="loader-2">
 				<div class="loader-inner"></div>
@@ -49,9 +66,7 @@
 				<ul>
 					<a href="index.html">
 						<li>
-							<p>
-								text1
-							</p>
+							<p>首页</p>
 						</li>
 					</a>
 
@@ -89,46 +104,52 @@
 							<dt><a href="#">友情链接</a></dt>
 						</dl>
 					</div>
-					<div class="coopyright">
+					<!--<div class="coopyright">
 						<div class="bq">
 							<div class="share">
-								<span>关注我们</span>
-								<a href="javascript:;" class="wechat">
-									<div>
-										微信
-									</div>
-									<div class="qr"></div>
-								</a>
-								<!--<a href="#">微博</a>-->
 							</div>
 						</div>
-					</div>
+					</div>-->
 					<div class="clear"></div>
-					<div class="bq2" style="">
-						©重庆海吉亚肿瘤医院版权所有 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="bq2">
+						©重庆海吉亚肿瘤医院版权所有
 					</div>
 				</div>
 			</div>
 		</footer>
 	</body>
 	<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/divscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(function() {
 			$(".users-down-anime").hide();
 			setTimeout(function() {
 				$(".users-down-anime").show();
-				$(".open-loading").fadeOut(600,function(){
+				$(".open-loading").fadeOut(600, function() {
 					$('html').css("overflow", "auto");
 				});
 			}, 2000);
+			var _bg = new Swiper('.swiper-container', {
+				direction: "vertical",
+				loop: true,
+				// 如果需要分页器
+				pagination: {
+					el: '.swiper-pagination',
+					dynamicBullets: 'true',
+				},
+				speed: 1500,
+				autoplay: true, //等同于以下设置
+				autoplay: {
+					delay: 2500,
+				}
+			});
 		})
 		$(document).scroll(function() {
 			var top = $(document).scrollTop();
 			if(top < 100) {
 				$('.users-down-anime').show(300);
 			} else {
-				$('.users-down-anime').hide(300);
+				$('.users-down-anime').fadeOut(300);
 			}
 		})
 	</script>
