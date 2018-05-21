@@ -42,8 +42,8 @@ li {
 }
 
 #swiper-bg .swiper-wrapper>.swiper-slide>.img01 {
-	background: url(../img/bg01-2.png);
-	background-size: cover; 
+	background: url(../img/bg01.png);
+	background-size: cover;
 }
 
 .users-down-anime {
@@ -136,8 +136,8 @@ li {
 	text-align: right;
 	float: right;
 	margin-right: 3vw;
-	width: 100%;
-	margin-top: 1vh;
+	width: 30%;
+	/*margin-top: 1vh;*/
 }
 
 .users-btn {
@@ -186,6 +186,7 @@ li {
 	border: 4px solid orangered;
 	z-index: 10;
 	opacity: 1;
+	transform: translateY(-10px);
 }
 
 .users-btn li:active {
@@ -236,6 +237,7 @@ li {
 		z-index: -1;
 	}
 	#swiper-bg .swiper-wrapper>.swiper-slide>.img01 {
+		background: url(../img/bg01-2.png);
 		background-position: top center !important;
 		background-size: auto 100% !important;
 	}
@@ -280,7 +282,6 @@ li {
 		background-color: #F0873D;
 	}
 	.bq2 {
-		color: black;
 		margin-right: 0;
 		width: 100%;
 		text-align: center;
@@ -288,6 +289,12 @@ li {
 	}
 	.footer .share a .qr {
 		margin-left: -95px !important;
+	}
+	.users-btn li>p {
+		position: absolute;
+		bottom: -6vh;
+		color: #fff;
+		font-size: 14px;
 	}
 }
 

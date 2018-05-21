@@ -1,6 +1,6 @@
 .footer{border-top: 4px solid #E8CC92;}
 .footer a{ text-decoration: none; }
-.footer{ padding-top: 40px;padding-bottom: 120px; background:linear-gradient(to right,#E89446,#FF6B2B);}
+.footer{ padding-top: 40px;padding-bottom: 140px; background:linear-gradient(to right,#E89446,#FF6B2B);}
 /*.footer-wrap{overflow: hidden;}*/
 .foot-nav{width: 50%;float: left;}
 .foot-nav dl{float: left;width: 100px; line-height: 16px !important;margin-bottom: 0;padding-bottom: 0;}
@@ -9,8 +9,9 @@
 .foot-nav dt{margin-bottom: 15px;text-align: center;/*border-bottom: 2px solid #6d6d6d;*/}
 .foot-nav dt a:hover{color: cadetblue;}
 .foot-nav dt a{position: relative; padding-bottom: 5px; display: inline-block;height: 100%;font-size: 16px;color: #fff;}
-.foot-nav dd a{color: #929292;}
-.foot-nav dd a:hover{color: #ccc;}
+.foot-nav dd {width: 100%;text-align: center;line-height: 22px;}
+.foot-nav dd a{color: #ccc;font-size: 14px;}
+.foot-nav dd a:hover{color: #eee;}
 .coopyright{width: 50%;float: right;text-align: right;position: relative;}
 .bq{color: #333;}
 .bq.users-text-center{text-align: center;}
@@ -25,3 +26,16 @@
 .footer .share a .qr:after{content: "";position: absolute;bottom: -20px;left: 50%;margin-left: -10px;border: 10px solid;border-color: #fff transparent transparent transparent;}
 .footer .share a .qr img{width: 100%;}
 .footer .share a:hover .qr{display: block;opacity: 1;bottom: auto;bottom: 40px;}
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+	.bq2 {
+		margin-right: 0;
+		width: 100%;
+		text-align: center;
+		margin-top: 25px;
+	}
+	.foot-nav{
+		width: 100%;
+	}
+.footer{ padding-top: 40px;padding-bottom: 180px; background:linear-gradient(to right,#E89446,#FF6B2B);}
+	
+}
