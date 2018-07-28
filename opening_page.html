@@ -19,7 +19,7 @@
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<div class="img01"></div>
+						<div class="img01 "></div>
 					</div>
 					<!--<div class="swiper-slide">
 						<div class="img02"></div>
@@ -32,7 +32,7 @@
 				<!--<div class="swiper-pagination"></div>-->
 			</div>
 		</div>
-		<aside class="open-loading">
+		<!--<aside class="open-loading">
 			<div class="loader-2">
 				<div class="loader-inner"></div>
 				<div class="loader-inner"></div>
@@ -41,7 +41,7 @@
 				<div class="loader-inner"></div>
 				<img class="logo animated flipInY" src="img/logo.png" height="90" width="90" />
 			</div>
-		</aside>
+		</aside>-->
 		<aside class="users-down-anime animated fadeInDown">
 			<span class="glyphicon glyphicon-menu-down"></span>
 		</aside>
@@ -58,9 +58,15 @@
 							<p class="QR-font">官方微信公众号</p>
 						</div>
 					</div>
+					<div class="QR-content">
+						<div class="QR-bg">
+							<img src="img/weiboQRcode.png" style="height: 20vh;" />
+							<p class="QR-font">官方微博</p>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="users-btn">
+			<!--<div class="users-btn">
 				<ul>
 					<a href="index.html">
 						<li>
@@ -77,7 +83,7 @@
 						<p>text4</p>
 					</li>
 				</ul>
-			</div>
+			</div>-->
 		</div>
 		<div class="users-footer-top">
 		</div>
@@ -114,8 +120,8 @@
 					</div>-->
 					<div class="clear"></div>
 					<div class="bq2">
-						<p><span style="color: #333;font-size: 1.2em;font-weight: 600;">预约电话：XXX-XXXX-XXXX</span></p>
-						©重庆海吉亚肿瘤医院版权所有
+						<p><span style="color: #eee;font-size: 1.2em;font-weight: 600;">热线：023-69801234</span></p>
+						<!--©重庆海吉亚肿瘤医院版权所有-->
 					</div>
 				</div>
 			</div>
@@ -126,26 +132,9 @@
 	<script type="text/javascript">
 		$(function() {
 			$(".users-down-anime").hide();
-			setTimeout(function() {
-				$(".users-down-anime").show();
-				$(".open-loading").fadeOut(600, function() {
-					$('html').css("overflow", "auto");
-				});
-			}, 2000);
-			var _bg = new Swiper('.swiper-container', {
-				direction: "vertical",
-				loop: true,
-				// 如果需要分页器
-				pagination: {
-					el: '.swiper-pagination',
-					dynamicBullets: 'true',
-				},
-				speed: 1500,
-				autoplay: true, //等同于以下设置
-				autoplay: {
-					delay: 2500,
-				}
-			});
+//			setTimeout(function(){
+//				window.location.href="./index.html";
+//			},3000);
 		})
 		$(document).scroll(function() {
 			var top = $(document).scrollTop();

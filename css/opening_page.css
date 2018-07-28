@@ -8,7 +8,7 @@ body {
 }
 
 html {
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 body {
@@ -42,10 +42,21 @@ li {
 }
 
 #swiper-bg .swiper-wrapper>.swiper-slide>.img01 {
-	background: url(../img/bg01.png);
+	background: url(../img/bg02.png);
 	background-size: cover;
+	animation:zoomAnime 12s infinite;
 }
-
+@keyframes zoomAnime{
+	0%{
+		transform: scale(1.1);
+	}
+	50%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.1);
+	}
+}
 .users-down-anime {
 	width: 100%;
 	position: absolute;
@@ -99,7 +110,7 @@ li {
 .QR>div {
 	display: flex;
 	justify-content: center;
-	margin-top: 53vh;
+	margin-top: 58vh;
 }
 
 .QR-content {
@@ -109,22 +120,23 @@ li {
 }
 
 .QR-content:hover {
-	transform: scale(1.2);
-	box-shadow: 0 5px 10px -2px #000000;
+	transform: translateY(-20px);
+	box-shadow: 0 5px 20px -2px #666;
 }
 
 .QR-bg {
-	height: 30vh;
-	width: 25vh;
-	background-color: #eee;
+	height: 27vh;
+	width: 22vh;
+	background-color: rgba(255,255,255,0.8);
 	text-align: center;
-	padding-top: 2vh;
+	padding-top: 1vh;
 }
 
 .QR-font {
-	padding-top: 8px;
-	font-size: 3vh;
+	padding-top: 5px;
+	font-size: 2.5vh;
 	font-weight: 600;
+	color: #F0873D;
 }
 
 .footer .share {
@@ -150,7 +162,7 @@ li {
 }
 
 .users-footer-top {
-	height: 15vh;
+	height: 10vh;
 	background-color: #F0873D;
 }
 

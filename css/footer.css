@@ -1,6 +1,6 @@
 .footer{border-top: 4px solid #E8CC92;}
 .footer a{ text-decoration: none; }
-.footer{ padding-top: 40px;padding-bottom: 140px; background:linear-gradient(to right,#E89446,#FF6B2B);}
+.footer{ padding-top: 40px;padding-bottom: 240px; background:linear-gradient(to right,#E89446,#FF6B2B);}
 /*.footer-wrap{overflow: hidden;}*/
 .foot-nav{width: 50%;float: left;}
 .foot-nav dl{float: left;width: 100px; line-height: 16px !important;margin-bottom: 0;padding-bottom: 0;}
