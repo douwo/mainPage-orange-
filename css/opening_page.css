@@ -44,19 +44,21 @@ li {
 #swiper-bg .swiper-wrapper>.swiper-slide>.img01 {
 	background: url(../img/bg02-02.jpg);
 	background-size: cover;
-	animation:zoomAnime 12s infinite;
+	animation: zoomAnime 12s infinite;
 }
-@keyframes zoomAnime{
-	0%{
+
+@keyframes zoomAnime {
+	0% {
 		transform: scale(1.08);
 	}
-	50%{
+	50% {
 		transform: scale(1);
 	}
-	100%{
+	100% {
 		transform: scale(1.08);
 	}
 }
+
 .users-down-anime {
 	width: 100%;
 	position: absolute;
@@ -80,6 +82,7 @@ li {
 	align-content: center;
 	padding-top: 15vh;
 	background-color: #fff;
+	z-index: 100;
 }
 
 .logo {
@@ -127,7 +130,7 @@ li {
 .QR-bg {
 	height: 27vh;
 	width: 22vh;
-	background-color: rgba(255,255,255,0.8);
+	background-color: rgba(255, 255, 255, 0.8);
 	text-align: center;
 	padding-top: 1vh;
 }
@@ -368,6 +371,62 @@ li {
 	transform: rotateZ(-30deg);
 	animation-name: loading-8;
 	animation-delay: 690ms;
+}
+
+.Countdown {
+	color: white;
+	height: 30px;
+	width: 300px;
+	background: #ff8008;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ff8008, #ffc837);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ff8008, #ffc837);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	display: flex;
+	position: fixed;
+	left: calc(50% - 150px);
+	top: 0;
+	justify-content: center;
+	align-content: center;
+	border-radius: 0 0 10px 10px;
+	opacity: 0;
+	box-shadow: 0 5px 20px -5px #666;
+	z-index: 101;
+}
+.Countdown+div{
+	position: fixed;
+	height: 30px;
+	line-height: 30px;
+	line-height: 30px;
+	left: calc(50% + 160px);
+	box-shadow: 0 5px 20px -5px #666;
+	z-index: 101;
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+	background-color: rgba(210,210,210,0.6);
+	border-radius: 0 0 10px 10px;
+}
+.Countdown+div:hover{
+	height: 50px;
+	line-height: 50px;
+}
+
+.Countdown+div>button{
+	color: #666;
+	border-radius: 0 0 10px 10px;
+	border: 0;
+	outline: none;
+	background-color: transparent;
+}
+p {
+	margin: 0;
+}
+
+.Countdown>p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 @keyframes loading-3 {

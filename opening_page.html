@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="overflow: hidden;">
 
 	<head>
 		<meta charset="utf-8" />
@@ -32,7 +32,7 @@
 				<!--<div class="swiper-pagination"></div>-->
 			</div>
 		</div>
-		<!--<aside class="open-loading">
+		<aside class="open-loading">
 			<div class="loader-2">
 				<div class="loader-inner"></div>
 				<div class="loader-inner"></div>
@@ -41,10 +41,18 @@
 				<div class="loader-inner"></div>
 				<img class="logo animated flipInY" src="img/logo.png" height="90" width="90" />
 			</div>
-		</aside>-->
+		</aside>
 		<aside class="users-down-anime animated fadeInDown">
 			<span class="glyphicon glyphicon-menu-down"></span>
 		</aside>
+		<div class="Countdown animated">
+			<p>友情提示：<span id="time"></span>秒后跳转到主页，
+				<a href="./index.html">点击立即跳转</a>
+			</p>
+		</div>
+		<div id="qxtz" class="animated">
+			<button id="qxtz-btn" onclick="stop_xh()">取消跳转</button>
+		</div>
 		<div class="container-fluid main-content">
 			<div class="users-logo">
 				<img style="float: left;" src="img/logo.png" height="110" width="110" />
@@ -122,7 +130,7 @@
 					</div>-->
 					<div class="clear"></div>
 					<div class="bq2">
-						<p><span style="color: #eee;font-size: 1.2em;font-weight: 600;">热线：023-69801234</span></p>
+						<p><span style="color: #eee;font-size: 1.2em;font-weight: 600;">热线：023-81390808</span></p>
 						<!--©重庆海吉亚肿瘤医院版权所有-->
 					</div>
 				</div>
@@ -134,10 +142,55 @@
 	<script type="text/javascript">
 		$(function() {
 			$(".users-down-anime").hide();
-			//			setTimeout(function(){
-			//				window.location.href="./index.html";
-			//			},3000);
+			$('html , body').animate({
+				scrollTop: 0
+			}, 100);
+			_Countdown = document.getElementsByClassName("Countdown");
+			_qxtz = document.getElementById("qxtz");
+			_time = document.getElementById("time");
+			setTimeout(function() {
+				_Countdown[0].style.opacity = 1;
+				_Countdown[0].classList.add("fadeInDown");
+				_qxtz.style.opacity = 1;
+				_qxtz.classList.add("fadeInDown");
+			}, 2000);
+			var _int = 11;
+			xh = self.setInterval(function() {
+				_time.innerText = _int;
+				console.log(_int);
+				_int--;
+			}, 1000);
+			_href = "./index.html";
+
+			function pageScroll() {
+				window.scrollBy(0, -10);
+				scrolldelay = setTimeout('pageScroll()', 100);
+			}
+			var _html, _openload;
+			setTimeout(function() {
+				test();
+			}, 11000);
+			setTimeout(function() {
+				_html = document.getElementsByTagName("html");
+				_html[0].style.overflow = "auto";
+				$(".open-loading").slideUp(700);
+			}, 2000);
 		})
+		var test = function Goindex() {
+			window.location.href = "./index.html"
+		}
+
+		function stop_xh() {
+			$(".Countdown>p").text("已取消跳转首页");
+			window.clearInterval(xh);
+			test = (function() {
+				setTimeout(function() {
+					_Countdown[0].classList.remove("fadeInDown");
+					_Countdown[0].classList.add("fadeOutUp");
+					$("#qxtz-btn").text("点击跳转首页").css("color","#fff").attr("onclick","window.location.href='./index.html'");
+				},2000);
+			})();
+		}
 		$(document).scroll(function() {
 			var top = $(document).scrollTop();
 			if(top < 100) {
